@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer th:fragment="assignmentFooter" class="assignment-footer">
+    <style>
+        .assignment-footer {
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid #d9e2ec;
+            color: #5b6572;
+            font-size: 0.95em;
+        }
+
+        .assignment-footer p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .assignment-footer strong {
+            color: #2c3e50;
+        }
+    </style>
+    <p>
+        <strong>실습 수행 일시:</strong>
+        <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 HH:mm:ss')}">2026년 04월 19일 17:00:00</span>
+        <span> | </span>
+        <strong>학번:</strong>
+        <span>2171078</span>
+        <span> | </span>
+        <strong>성명:</strong>
+        <span>허현</span>
+    </p>
+</footer>
+</body>
+</html>
